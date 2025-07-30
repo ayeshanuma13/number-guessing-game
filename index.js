@@ -32,7 +32,7 @@ function checkGuess(correct, guess){
 
 function mainGame(){
     let correctNumber = generateRandomNumber();
-    console.log("Correct number (for testing):", correctNumber);
+    //console.log("Correct number (for testing):", correctNumber);
 
     let counter = 0;
     let points = 100;
