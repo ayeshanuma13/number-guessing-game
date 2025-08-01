@@ -3,15 +3,28 @@ function generateRandomNumber(){
 }
 
 function getPlayerGuess(){
-    let guess = Number(prompt("Enter your guess"))
+    let input = prompt("Enter your guess (1 to 100):");
+
+    if (input === null) {
+        let quit = confirm("Do you want to quit the game?");
+        if (quit) {
+            alert("Thanks for playing!");
+            throw new Error("User exited the game.");
+        } else {
+            return getPlayerGuess();
+        }
+    }
+
+    let guess = Number(input);
+
     if (!Number.isInteger(guess) || guess < 1 || guess > 100 ){
         alert("Please enter a valid input");
         return getPlayerGuess();
     }
-    else{
-        return guess;
-    }    
+
+    return guess;
 }
+
 
 function checkGuess(correct, guess){
     if(guess === correct){
