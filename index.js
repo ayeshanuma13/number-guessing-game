@@ -12,9 +12,6 @@ function getPlayerGuess(){
         return guess;
     }    
 }
-let guessedNumber = getPlayerGuess();
-console.log(guessedNumber);
-
 
 function checkGuess(correct, guess){
     if(guess === correct){
@@ -32,7 +29,6 @@ function checkGuess(correct, guess){
 
 function mainGame(){
     let correctNumber = generateRandomNumber();
-    //console.log("Correct number (for testing):", correctNumber);
 
     let counter = 0;
     let points = 100;
