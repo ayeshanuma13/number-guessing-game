@@ -57,12 +57,25 @@ function mainGame(){
     }
 
     if (guessedCorrectly) {
-        alert(`You guessed the number in ${counter} attempts!`);
+    alert(`COORDINATE LOCKED IN!`);
+    alert(`You cracked the code in ${counter } attempts!`);
+    alert(`Remaining energy: ${Math.max(points, 0)}%`);
+    alert(`
+         MISSION SUCCESSFUL!
+         The alien AI acknowledges your intelligence.
+         Ship control restored. Course set for home.
+        "Human logic... unexpectedly effective."`);
     } else {
-        alert(`You've exceeded your attempts. The correct number was ${correctNumber}.`);
+        alert(`COORDINATE SEQUENCE FAILED.`);
+        alert(`All attempts used. The correct number was ${correctNumber}.`);
+    alert(`
+        MISSION FAILED.
+        
+        The AI remains silent.
+        Reactor core overload imminent.
+        
+        "Perhaps next time, carbon unit."`);
     }
-
-    alert(`Your score is ${guessedCorrectly ? Math.max(points, 0) : 0}`);
 }
 
 function startGame(){
@@ -72,6 +85,27 @@ function startGame(){
     
     alert("Thanks for playing!");
 }
+
+alert(`
+🚨 TRANSMISSION INCOMING... 🚨
+
+📡 [GALACTIC ENCRYPTED MESSAGE DECODED]
+
+👤 Captain, we’ve intercepted a signal from an ancient alien AI. 
+It has locked down our ship and issued a challenge.
+
+🤖 "GUESS THE PRIME COORDINATE — A NUMBER BETWEEN 1 AND 100."
+
+You have 10 attempts before the reactor overloads. Each failed attempt drains 
+your energy core by 10%.
+
+🌌 Success means freedom. Failure... well, let's not go there.
+
+🧠 Engage logic. Trust your instincts. And may the data be with you.
+
+> Initializing challenge...
+`);
+
 
 startGame();
 
