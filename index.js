@@ -28,14 +28,14 @@ function getPlayerGuess(){
 
 function checkGuess(correct, guess){
     if(guess === correct){
-        console.log("You guessed it right");
+        alert("You guessed it right");
         return true;
     }
     else if(guess < correct){
-        console.log("Try higher");
+        alert("Try higher");
     }
     else{
-        console.log("Try lower");
+        alert("Try lower");
     }
     return false;
 }
@@ -57,18 +57,18 @@ function mainGame(){
     }
 
     if (guessedCorrectly) {
-    console.log(`COORDINATE LOCKED IN!`);
-    console.log(`You cracked the code in ${counter } attempts!`);
-    console.log(`Remaining energy: ${Math.max(points, 0)}%`);
-    console.log(`
+    alert(`COORDINATE LOCKED IN!`);
+    alert(`You cracked the code in ${counter } attempts!`);
+    alert(`Remaining energy: ${Math.max(points, 0)}%`);
+    alert(`
          MISSION SUCCESSFUL!
          The alien AI acknowledges your intelligence.
          Ship control restored. Course set for home.
         "Human logic... unexpectedly effective."`);
     } else {
-        console.log(`COORDINATE SEQUENCE FAILED.`);
-        console.log(`All attempts used. The correct number was ${correctNumber}.`);
-    console.log(`
+        alert(`COORDINATE SEQUENCE FAILED.`);
+        alert(`All attempts used. The correct number was ${correctNumber}.`);
+    alert(`
         MISSION FAILED.
         
         The AI remains silent.
@@ -83,10 +83,10 @@ function startGame(){
         mainGame();
     } while (confirm("Would you like to play again?"));
     
-    console.log("Thanks for playing!");
+    alert("Thanks for playing!");
 }
 
-console.log(`
+alert(`
 🚨 TRANSMISSION INCOMING... 🚨
 
 📡 [GALACTIC ENCRYPTED MESSAGE DECODED]
